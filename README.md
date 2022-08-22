@@ -8,10 +8,11 @@ Server side is built with Node, Express and MySQL on https://freemysqlhosting.ne
 
 You can clone this app by copying this code in to your terminal:
 
-git clone https://github.com/Rokas214/Service my-app
+### 'git clone https://github.com/Rokas214/Service my-app'
 
 Install all necessary packages
-npm install
+
+# npm install
 
 Database connected on https://freemysqlhosting.net/ but you can do it on your own mashine.
 
