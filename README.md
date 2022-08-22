@@ -11,3 +11,11 @@ git clone https://github.com/Rokas214/Service
 npm install
 
 Database connected on https://freemysqlhosting.net/
+
+To create your database table run this sql script:
+
+CREATE TABLE cart (id INT PRIMARY KEY AUTO_INCREMENT,img TEXT, title VARCHAR(255), author VARCHAR(255), year INT, description TEXT, price INT,email TEXT);
+
+CREATE TABLE books (id INT PRIMARY KEY AUTO_INCREMENT,img TEXT, title VARCHAR(255), author VARCHAR(255), year INT, description TEXT, price INT,email TEXT);
+
+CREATE TABLE users (id INT PRIMARY KEY AUTO_INCREMENT,email TEXT, password TEXT)
