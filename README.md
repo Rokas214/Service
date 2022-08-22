@@ -12,7 +12,7 @@ You can clone this app by copying this code in to your terminal:
 
 Install all necessary packages
 
-# npm install
+### 'npm install'
 
 Database connected on https://freemysqlhosting.net/ but you can do it on your own mashine.
 
