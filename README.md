@@ -6,11 +6,13 @@ Server side is built with Node, Express and MySQL on https://freemysqlhosting.ne
 
 ## Development
 
-git clone https://github.com/Rokas214/Service
+You can clone this app by copying this code in to your terminal:
+git clone https://github.com/Rokas214/Service my-app
 
+Install all necessary packages
 npm install
 
-Database connected on https://freemysqlhosting.net/
+Database connected on https://freemysqlhosting.net/ but you can do it on your own mashine.
 
 To create your database table run this sql script:
 
