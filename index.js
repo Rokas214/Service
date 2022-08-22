@@ -13,6 +13,7 @@ const {
   home,
   userProducts,
   viewSingleProduct,
+  cart,
 } = require('./src/routes/v1');
 
 app.use('/postproduct', createProduct);
@@ -22,5 +23,6 @@ app.use('/home', home);
 app.use('/delete', deleteProduct);
 app.use('/userproduct', userProducts);
 app.use('/viewpost', viewSingleProduct);
+app.use('/cart', cart);
 
 app.listen(port, () => console.log("it's working"));

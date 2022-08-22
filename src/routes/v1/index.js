@@ -5,6 +5,7 @@ const home = require('./home');
 const loginUser = require('./auth');
 const userProducts = require('./userProducts');
 const viewSingleProduct = require('./viewSingleProduct');
+const cart = require('./cart');
 
 module.exports = {
   auth,
@@ -14,4 +15,5 @@ module.exports = {
   loginUser,
   userProducts,
   viewSingleProduct,
+  cart,
 };
