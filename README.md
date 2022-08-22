@@ -7,6 +7,7 @@ Server side is built with Node, Express and MySQL on https://freemysqlhosting.ne
 ## Development
 
 You can clone this app by copying this code in to your terminal:
+
 git clone https://github.com/Rokas214/Service my-app
 
 Install all necessary packages
