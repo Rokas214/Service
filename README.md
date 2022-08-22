@@ -10,7 +10,7 @@ You can clone this app by copying this code in to your terminal:
 
 ### 'git clone https://github.com/Rokas214/Service my-app'
 
-Install all necessary packages
+Install all necessary packages:
 
 ### 'npm install'
 

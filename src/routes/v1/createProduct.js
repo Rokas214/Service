@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
     const con = await mysql.createConnection(dbConfig);
     const [data] = await con.execute(`
         INSERT INTO books (img,title,author,year,description,price,email)
-        VALUES ('${input.img}', '${input.title}', '${input.author}', '${input.year}','${input.description}' ,'${input.price}','${input.email}')
+        VALUES ('${input.img}', '${input.title}', '${input.author}', '${input.year}','${input.description}' ,'${input.price}','${req.headers.email}')
 
         `);
     await con.end();
