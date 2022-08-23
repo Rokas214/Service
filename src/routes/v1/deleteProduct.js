@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
     await con.end();
     res.send(data);
   } catch (err) {
-    console.log(err);
+    return res.send({msg: "Something went wrong"});
   }
 });
 
