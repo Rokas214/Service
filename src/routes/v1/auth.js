@@ -42,7 +42,7 @@ router.post('/register', async (req, res) => {
       return res.send({ err: 'Email is already taken' });
     }
   } catch (err) {
-    res.status(400).send(err);
+    return res.status(400).send(err);
   }
   try {
     const con = await mysql.createConnection(dbConfig);
@@ -55,7 +55,7 @@ router.post('/register', async (req, res) => {
     res.send(data);
     return data;
   } catch (err) {
-    res.status(400).send(err);
+    return res.status(400).send(err);
   }
 });
 
