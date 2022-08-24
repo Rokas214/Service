@@ -11,9 +11,9 @@ router.post('/', async (req, res) => {
         WHERE id = ('${req.body.id}')
         `);
     await con.end();
-    res.send(data);
+    return res.send(data);
   } catch (err) {
-    console.log(err);
+    return res.send({msg: "Something went wrong"});
   }
 });
 
