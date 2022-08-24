@@ -13,9 +13,9 @@ router.post('/cart', async (req, res) => {
   
           `);
     await con.end();
-    res.send(data);
+    return res.send(data);
   } catch (err) {
-    res.status(400).send(err);
+    return res.status(500).send(err);
   }
 });
 
@@ -27,9 +27,9 @@ router.post('/delcart', async (req, res) => {
           WHERE id = ('${req.body.id}')
           `);
     await con.end();
-    res.send(data);
+    return res.send(data);
   } catch (err) {
-    console.log(err);
+    return res.status(500).send({ err: err });
   }
 });
 
@@ -45,22 +45,8 @@ router.post('/getcart', async (req, res) => {
       return res.send(data);
     }
   } catch (err) {
-    res.status(400).send(err);
+    res.status(500).send(err);
   }
 });
-
-// router.get('/getcart', async (req, res) => {
-//     try {
-//       const con = await mysql.createConnection(dbConfig);
-//   const [data] = await con.execute(`SELECT * FROM cart
-//   WHERE email = ('${req.body.email}')`);
-//       await con.end();
-//       if (data.length === 0) {
-//         return res.send({ msg: 'there is no items in your cart' });
-//       }
-//     } catch (err) {
-//       res.status(400).send(err);
-//     }
-//   });
 
 module.exports = router;
