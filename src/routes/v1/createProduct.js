@@ -13,9 +13,9 @@ router.post('/', async (req, res) => {
 
         `);
     await con.end();
-    res.send(data);
+    return res.send(data);
   } catch (err) {
-    res.status(400).send(err);
+    return res.status(400).send(err);
   }
 });
 

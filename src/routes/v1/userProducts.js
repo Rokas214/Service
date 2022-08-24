@@ -17,9 +17,9 @@ router.get('/', async (req, res) => {
         WHERE email=('${req.headers.email}')
         `);
     await con.end();
-    res.send(data);
+    return res.send(data);
   } catch (err) {
-    res.status(400).send(err);
+    return res.status(500).send(err);
   }
 });
 

@@ -51,8 +51,7 @@ router.post('/register', async (req, res) => {
 		`);
 
     await con.end();
-    res.send(data);
-    return data;
+    return res.send(data);
   } catch (err) {
     return res.status(400).send(err);
   }
