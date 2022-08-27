@@ -39,11 +39,7 @@ router.post('/getcart', async (req, res) => {
     const [data] = await con.execute(`SELECT * FROM cart
     WHERE email = ('${req.headers.email}')`);
     await con.end();
-    if (data.length === 0) {
-      return res.send({ err: 'Your cart is empty' });
-    } else {
-      return res.send(data);
-    }
+    return res.send(data);
   } catch (err) {
     res.status(500).send(err);
   }
