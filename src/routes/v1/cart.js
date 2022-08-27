@@ -2,6 +2,7 @@ const { dbConfig } = require('../../config');
 const express = require('express');
 const mysql = require('mysql2/promise');
 const router = express.Router();
+const Joi = require('joi');
 
 router.post('/cart', async (req, res) => {
   let input = req.body;
