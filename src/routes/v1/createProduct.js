@@ -3,6 +3,7 @@ const express = require('express');
 const mysql = require('mysql2/promise');
 const router = express.Router();
 const Joi = require('joi');
+const { isLoggedIn } = require('../../midleware');
 
 const userSchema = Joi.object({
   img: Joi.string().min(6).max(255).required(),
@@ -13,7 +14,7 @@ const userSchema = Joi.object({
   price: Joi.number().integer().min(0).max(2022),
 });
 
-router.post('/', async (req, res) => {
+router.post('/', isLoggedIn, async (req, res) => {
   let input = req.body;
 
   try {
